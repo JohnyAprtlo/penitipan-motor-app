@@ -83,8 +83,7 @@ class _LoginScreenState extends State<LoginScreen>
     return Scaffold(
       body: Container(
         width: double.infinity,
-          color: AppColors.primary,
-        ),
+        color: AppColors.primary,
         child: FadeTransition(
           opacity: _fadeAnim,
           child: SafeArea(
