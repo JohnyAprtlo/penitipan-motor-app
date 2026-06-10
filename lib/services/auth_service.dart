@@ -89,7 +89,11 @@ class AuthService {
 
   // Logout
   Future<void> signOut() async {
-    await _googleSignIn.signOut();
+    try {
+      await _googleSignIn.signOut();
+    } catch (_) {
+      // Abaikan error jika user bukan login via Google
+    }
     await _auth.signOut();
   }
 }

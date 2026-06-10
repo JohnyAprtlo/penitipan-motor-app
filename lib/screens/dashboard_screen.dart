@@ -64,9 +64,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
     if (confirm == true) {
       await _authService.signOut();
       if (mounted) {
-        Navigator.pushReplacement(
+        Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (_) => const LoginScreen()),
+          (route) => false,
         );
       }
     }
