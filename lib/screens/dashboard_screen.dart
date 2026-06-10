@@ -386,6 +386,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   final motors = snapshot.data!.docs
                       .map((doc) => MotorModel.fromFirestore(doc))
                       .toList();
+                  
+                  // Sort secara lokal berdasarkan checkInAt terbaru karena kita menghapus orderBy di Firestore
+                  motors.sort((a, b) => b.checkInAt.compareTo(a.checkInAt));
 
                   return ListView.separated(
                     shrinkWrap: true,

@@ -17,7 +17,6 @@ class FirestoreService {
     return _db
         .collection('motor')
         .where('status', isEqualTo: 'in')
-        .orderBy('checkInAt', descending: true)
         .snapshots();
   }
 
