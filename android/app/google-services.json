@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "626141982704",
+    "project_id": "penitipan-motor",
+    "storage_bucket": "penitipan-motor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626141982704:android:779085d45ef734b19cb735",
+        "android_client_info": {
+          "package_name": "com.example.penitipan_motor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQW2sHDQTV1FZWh4My4Xcd81_rM2na0Hs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
