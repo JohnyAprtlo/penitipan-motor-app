@@ -388,7 +388,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       .toList();
                   
                   // Sort secara lokal berdasarkan checkInAt terbaru karena kita menghapus orderBy di Firestore
-                  motors.sort((a, b) => b.checkInAt.compareTo(a.checkInAt));
+                  motors.sort((a, b) {
+                    final timeA = a.checkInAt ?? Timestamp.now();
+                    final timeB = b.checkInAt ?? Timestamp.now();
+                    return timeB.compareTo(timeA);
+                  });
 
                   return ListView.separated(
                     shrinkWrap: true,
